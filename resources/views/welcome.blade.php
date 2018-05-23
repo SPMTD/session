@@ -1,14 +1,24 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+            <!-- CSRF Token -->
+            <meta name="csrf-token" content="{{ csrf_token() }}">
+        
+            <title>{{ config('app.name', 'Session') }}</title>
+        
+            <!-- Scripts -->
+            <script src="{{ asset('js/app.js') }}" defer></script>
+        
+            <!-- Fonts -->
+            <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        
+            <!-- Styles -->
+            <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -41,6 +51,12 @@
                 top: 18px;
             }
 
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+
             .content {
                 text-align: center;
             }
@@ -67,9 +83,20 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
+                <div class="top-left links">
+                        <a href="{{ url('/home') }}">Session</a>
+                </div>
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                   {{ __('Logout') }}
+               </a>
+
+               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                   @csrf
+               </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -78,17 +105,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <div class="Map">
+                    Mapper::map(53.381128999999990000, -1.470085000000040000);
             </div>
         </div>
     </body>
