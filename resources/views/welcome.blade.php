@@ -19,69 +19,11 @@
         
             <!-- Styles -->
             <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .top-left {
-                position: absolute;
-                left: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref nav-bar">
             @if (Route::has('login'))
                 <div class="top-left links">
                         <a href="{{ url('/home') }}">Session</a>
@@ -103,11 +45,33 @@
                     @endauth
                 </div>
             @endif
+        </div>
 
             <div class="content">
-                <div class="Map">
-                    Mapper::map(53.381128999999990000, -1.470085000000040000);
+                <div class="map_canvas" style="margin-bottom: 1%; width: 100vw; height: 20rem;">
+                        {!! Mapper::render () !!}    
+                </div>
+
+                <div class="title">
+                    <h1>Session</h1>
+                </div>
+
+                <div class="options">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <p>test</p>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <p>test</p>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <p>test</p>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <p>test</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </body>
 </html>
