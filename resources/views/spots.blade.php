@@ -56,28 +56,6 @@
                 <div class="title">
                     <h1>Session</h1>
                 </div>
-
-                <div class="options">
-                    <div class="row">
-                        <a href="{{ url('/spots') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
-                            <img class="options-icon" src="{{ asset('img/gm-icon.png') }}"
-                            <br>
-                            <h3>Spots</h3>
-                        </a>
-                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
-                            <br>
-                            <p>test</p>
-                        </a>
-                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
-                            <br>
-                            <p>test</p>
-                        </a>
-                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
-                            <br>
-                            <p>test</p>
-                        </a>
-                    </div>
-                </div>
             </div>
     </body>
 </html>
