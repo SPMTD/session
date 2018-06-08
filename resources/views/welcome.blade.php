@@ -58,18 +58,23 @@
 
                 <div class="options">
                     <div class="row">
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <a href="{{ url('/spots') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
+                            <img class="options-icon" src="{{ asset('img/gm-icon.png') }}"
+                            <br>
+                            <h3>Spots</h3>
+                        </a>
+                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
+                            <br>
                             <p>test</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        </a>
+                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
+                            <br>
                             <p>test</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        </a>
+                        <a href="{{ url('/newspot') }}" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 options-button">
+                            <br>
                             <p>test</p>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <p>test</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
