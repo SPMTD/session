@@ -27,6 +27,7 @@
             @if (Route::has('login'))
                 <div class="top-left links">
                         <a href="{{ url('/home') }}">Session</a>
+                        <a href="{{ url('/spots') }}">Spots</a>
                 </div>
                 <div class="top-right links">
                     @auth
