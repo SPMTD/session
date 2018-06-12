@@ -53,8 +53,8 @@
                         {!! Mapper::render () !!}    
                 </div>
 
-                <div class="title">
-                    <h1>Session</h1>
+                <div class="spots_interface">
+                      
                 </div>
             </div>
     </body>
