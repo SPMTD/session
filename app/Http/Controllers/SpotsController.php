@@ -19,7 +19,7 @@ class SpotsController extends Controller {
     public function index()
     {
         Mapper::map(0, 0, ['marker' => false, 'zoom' => 10, 'markers' => ['title' => 'You are here', 'animation' => 'DROP', 'icon' => 'http://app.sesami.fr/images/marker-black.svg']]);
-        Mapper::informationWindow(51.917606, 4.488776, 'Wijnhaven 99', ['open' => true, 'markers' => ['title' => 'Title']]);
+        Mapper::informationWindow(51.911992, 4.481689, 'Wijnhaven 99', ['open' => true, 'markers' => ['title' => 'Title']]);
         return view('spots');
     }
 }
